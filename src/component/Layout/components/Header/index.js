@@ -5,6 +5,7 @@ import {
   faCircleXmark,
   faSpinner,
   faMagnifyingGlass,
+  faA,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 
@@ -13,8 +14,28 @@ import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountItems from '~/component/AccountItems';
+import Menu from '~/component/Popper/Menu';
+import {
+  faCircleQuestion,
+  faKeyboard,
+} from '@fortawesome/free-regular-svg-icons';
 
 const cx = classNames.bind(styles);
+const MENU_ITEMS = [
+  {
+    icon: <FontAwesomeIcon icon={faA} />,
+    title: 'English',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+    title: 'Feedback and help',
+    to: '/feedback',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: 'Keyboard shorcuts',
+  },
+];
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
 
@@ -60,6 +81,11 @@ function Header() {
         <div className={cx('actions')}>
           <Button text>Upload</Button>
           <Button primary>Log in</Button>
+          <Menu items={MENU_ITEMS}>
+            <button className={cx('more-btn')}>
+              <img src={images.more} alt="more actions" />
+            </button>
+          </Menu>
         </div>
       </div>
     </header>
