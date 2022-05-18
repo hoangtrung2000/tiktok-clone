@@ -5,6 +5,7 @@
   --primary: rgba(254, 44, 85, 1);
   --default-layout-header-height: 60px;
   --default-layout-width: 1150px;
+  --default-layout-horizontal-spacer: 24px;
   --black: #000;
   --text-color: #333;
   --white: #fff;
@@ -36,4 +37,3 @@ a[href] {
   color: var(--text-color);
   text-decoration: none;
 }
-
