@@ -95,6 +95,11 @@
   }
 }
 
+.actions {
+  display: flex;
+  align-items: center;
+}
+
 .more-btn {
   margin-left: 1.6rem;
   padding: 4px 4px;
@@ -102,6 +107,19 @@
   cursor: pointer;
 }
 
-.menu-items {
-  width: 224px;
+.action-btn {
+  font-size: 2.2rem;
+  color: #161823;
+  background-color: transparent;
+  padding: 4px 16px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 100rem;
+  object-fit: cover;
+  margin-left: 12px;
+  cursor: pointer;
 }
