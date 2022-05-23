@@ -4,8 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleXmark,
   faSpinner,
-  faA,
-  faGear,
   faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
@@ -18,16 +16,19 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountItems from '~/component/AccountItems';
 import {
+  FeedbackIcon,
   InboxIcon,
+  KeyBoardIcon,
+  LanguageIcon,
   MessageIcon,
   SearchIcon,
+  SettingIcon,
+  TitokCoin,
   UploadIcon,
 } from '~/component/Icons';
 import Image from '~/component/Image';
 import Menu from '~/component/Popper/Menu';
 import {
-  faCircleQuestion,
-  faKeyboard,
   faUser,
   // faPaperPlane,
 } from '@fortawesome/free-regular-svg-icons';
@@ -35,7 +36,7 @@ import {
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
   {
-    icon: <FontAwesomeIcon icon={faA} />,
+    icon: <LanguageIcon />,
     title: 'English',
     children: {
       title: 'Language',
@@ -54,12 +55,12 @@ const MENU_ITEMS = [
     },
   },
   {
-    icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+    icon: <FeedbackIcon />,
     title: 'Feedback and help',
     to: '/feedback',
   },
   {
-    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    icon: <KeyBoardIcon />,
     title: 'Keyboard shorcuts',
   },
 ];
@@ -84,12 +85,12 @@ function Header() {
       to: '/@dasha',
     },
     {
-      icon: <img src={images.coin} alt="tiktok coin icon" />,
+      icon: <TitokCoin />,
       title: 'Get coins',
       to: '/coin',
     },
     {
-      icon: <FontAwesomeIcon icon={faGear} />,
+      icon: <SettingIcon />,
       title: 'Setting',
       to: '/setting',
     },
