@@ -78,6 +78,9 @@
   color: rgba(22, 24, 35, 0.34);
 }
 .search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: var(--search-button-width);
   height: 100%;
   border-top-right-radius: var(--search-border-radius);
@@ -108,11 +111,28 @@
 }
 
 .action-btn {
+  position: relative;
+  display: flex;
   font-size: 2.2rem;
   color: #161823;
   background-color: transparent;
-  padding: 4px 16px;
+  padding: 4px 10px;
   cursor: pointer;
+}
+
+.badge {
+  position: absolute;
+  top: -3px;
+  right: 0;
+  padding: 0 6px;
+  height: 2rem;
+  line-height: 2rem;
+  border-radius: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--white);
+  font-family: 'ProximaNova', sans-serif;
+  background-color: var(--primary);
 }
 
 .user-avatar {
@@ -120,6 +140,6 @@
   height: 32px;
   border-radius: 100rem;
   object-fit: cover;
-  margin-left: 12px;
+  margin-left: 14px;
   cursor: pointer;
 }
