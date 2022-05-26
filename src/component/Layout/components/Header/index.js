@@ -1,8 +1,8 @@
 import React from 'react';
 import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Tippy from '@tippyjs/react/';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
 import Button from '~/component/Button';
 import Image from '~/component/Image';
@@ -23,6 +23,7 @@ import {
   UploadIcon,
 } from '~/component/Icons';
 import Menu from '~/component/Popper/Menu';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -90,7 +91,9 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="tiktok" />
+        <Link to={routesConfig.home} className={cx('logo-link')}>
+          <img src={images.logo} alt="tiktok" />
+        </Link>
 
         <Search />
 
