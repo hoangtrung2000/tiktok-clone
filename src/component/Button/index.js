@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 import styles from './Button.module.scss';
@@ -45,7 +46,7 @@ function Button({
     Comp = 'a';
   }
   const classes = cx('wrapper', {
-    [ className]: className,
+    [className]: className,
     primary,
     outline,
     text,
@@ -62,5 +63,22 @@ function Button({
     </Comp>
   );
 }
+
+Button.propTypes = {
+  to: PropTypes.string,
+  href: PropTypes.string,
+  small: PropTypes.bool,
+  large: PropTypes.bool,
+  outline: PropTypes.bool,
+  primary: PropTypes.bool,
+  rounded: PropTypes.bool,
+  text: PropTypes.bool,
+  disabled: PropTypes.bool,
+  leftIcon: PropTypes.node,
+  rightIcon: PropTypes.node,
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  onClick: PropTypes.func,
+};
 
 export default Button;
